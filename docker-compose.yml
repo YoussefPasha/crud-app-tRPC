@@ -1,0 +1,68 @@
+version: "1"
+
+services:
+  db:
+    image: postgres:14.1-alpine
+    ports:
+      - 5433:5432
+    container_name: crud-db-deploy
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crud
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - crud-db-deploy:/var/lib/postgresql/data
+
+  s3ninja:
+    image: scireum/s3-ninja:latest
+    ports:
+      - 9444:9000
+    container_name: crud-s3-ninja-deploy
+    volumes:
+      - crud-s3-ninja-deploy:/home/sirius/data
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./nginx
+    ports:
+      - "3050:80"
+
+  api:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./backend
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@db:5432/crud
+      S3_NINJA_ACCESS_KEY_ID: AKIAIOSFODNN7EXAMPLE
+      S3_NINJA_SECRET_KEY_ID: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+      S3_NINJA_BUCKET_NAME: crud
+      S3_NINJA_ENDPOINT: http://192.168.1.2:9444
+      S3_NINJA_REGION: us-east-1
+    ports:
+      - "8080:8080"
+  client:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./frontend
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:8080/
+    ports:
+      - "3000:3000"
+
+volumes:
+  crud-db-deploy:
+    driver: local
+  crud-s3-ninja-deploy:
+    driver: local

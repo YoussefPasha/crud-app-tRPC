@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // uses connection pooling
+}
+
+model Apartment {
+  id          Int      @id @default(autoincrement())
+  name        String
+  address     String
+  city        String
+  state       String
+  zipCode     String
+  units       String
+  imageUrl    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  ratings     Float   @default(0)
+  price       Float   
+}
+

@@ -1,0 +1,13 @@
+FROM node:22.0.0
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 8080
+
+CMD ["sh", "-c", "npm run generate:prisma && npm run dev"]

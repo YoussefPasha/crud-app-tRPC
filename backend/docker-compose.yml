@@ -1,0 +1,37 @@
+version: "1"
+
+services:
+  db:
+    image: postgres:14.1-alpine
+    ports:
+      - 5433:5432
+    container_name: crud-db
+    networks:
+      - crud-network
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: crud
+      POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+      - crud-db:/var/lib/postgresql/data
+
+  s3ninja:
+    image: scireum/s3-ninja:latest
+    ports:
+      - 9444:9000
+    container_name: crud-s3-ninja
+    networks:
+      - crud-network
+    volumes:
+      - crud-s3-ninja:/home/sirius/data
+
+networks:
+  crud-network:
+    driver: bridge
+
+volumes:
+  crud-db:
+    driver: local
+  crud-s3-ninja:
+    driver: local

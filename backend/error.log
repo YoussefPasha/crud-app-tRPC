@@ -1,0 +1,73 @@
+[31merror[39m: failed to ensure s3 bucket CORS rules Bucket does not exist {"$fault":"client","$metadata":{"attempts":1,"httpStatusCode":404,"totalRetryDelay":0},"Code":"NoSuchBucket","Resource":"/crud","name":"NoSuchBucket","stack":"NoSuchBucket: Bucket does not exist\n    at de_NoSuchBucketRes (/app/node_modules/@aws-sdk/client-s3/dist-cjs/index.js:4786:21)\n    at de_CommandError (/app/node_modules/@aws-sdk/client-s3/dist-cjs/index.js:4727:19)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /app/node_modules/@smithy/middleware-serde/dist-cjs/index.js:35:20\n    at async /app/node_modules/@aws-sdk/middleware-signing/dist-cjs/index.js:226:18\n    at async /app/node_modules/@smithy/middleware-retry/dist-cjs/index.js:320:38\n    at async /app/node_modules/@aws-sdk/middleware-flexible-checksums/dist-cjs/index.js:174:18\n    at async /app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:98:20\n    at async /app/node_modules/@aws-sdk/middleware-sdk-s3/dist-cjs/index.js:121:14\n    at async /app/node_modules/@aws-sdk/middleware-logger/dist-cjs/index.js:34:22"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+/app/src/controllers/apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+error: Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.
+  -->  schema.prisma:8
+   | 
+ 7 |   provider = "postgresql"
+ 8 |   url      = env("DATABASE_URL") // uses connection pooling
+   | 
+
+Validation Error Count: 1 {"clientVersion":"5.17.0","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: \nInvalid `apartmentClient.create()` invocation in\n/app/src/controllers/apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nerror: Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.\n  -->  schema.prisma:8\n   | \n 7 |   provider = \"postgresql\"\n 8 |   url      = env(\"DATABASE_URL\") // uses connection pooling\n   | \n\nValidation Error Count: 1\n    at _n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:8049)\n    at _n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7057)\n    at _n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6741)\n    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9355)"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+/app/src/controllers/apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+Can't reach database server at `localhost:5433`
+
+Please make sure your database server is running at `localhost:5433`. {"clientVersion":"5.17.0","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: \nInvalid `apartmentClient.create()` invocation in\n/app/src/controllers/apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nCan't reach database server at `localhost:5433`\n\nPlease make sure your database server is running at `localhost:5433`.\n    at _n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:8049)\n    at _n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7057)\n    at _n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6741)\n    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9355)"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+/app/src/controllers/apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+Can't reach database server at `localhost:5433`
+
+Please make sure your database server is running at `localhost:5433`. {"clientVersion":"5.17.0","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: \nInvalid `apartmentClient.create()` invocation in\n/app/src/controllers/apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nCan't reach database server at `localhost:5433`\n\nPlease make sure your database server is running at `localhost:5433`.\n    at _n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:8049)\n    at _n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7057)\n    at _n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6741)\n    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9355)"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+/app/src/controllers/apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+Can't reach database server at `localhost:5433`
+
+Please make sure your database server is running at `localhost:5433`. {"clientVersion":"5.17.0","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: \nInvalid `apartmentClient.create()` invocation in\n/app/src/controllers/apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nCan't reach database server at `localhost:5433`\n\nPlease make sure your database server is running at `localhost:5433`.\n    at _n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:8049)\n    at _n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7057)\n    at _n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6741)\n    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9355)"}
+[31merror[39m: failed to ensure s3 bucket CORS rules Bucket does not exist {"$fault":"client","$metadata":{"attempts":1,"httpStatusCode":404,"totalRetryDelay":0},"Code":"NoSuchBucket","Resource":"/crud","name":"NoSuchBucket","stack":"NoSuchBucket: Bucket does not exist\n    at de_NoSuchBucketRes (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\client-s3\\dist-cjs\\index.js:4786:21)\n    at de_CommandError (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\client-s3\\dist-cjs\\index.js:4727:19)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@smithy\\middleware-serde\\dist-cjs\\index.js:35:20\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\middleware-signing\\dist-cjs\\index.js:226:18\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@smithy\\middleware-retry\\dist-cjs\\index.js:320:38\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\middleware-flexible-checksums\\dist-cjs\\index.js:174:18\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\middleware-sdk-s3\\dist-cjs\\index.js:98:20\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\middleware-sdk-s3\\dist-cjs\\index.js:121:14\n    at async C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@aws-sdk\\middleware-logger\\dist-cjs\\index.js:34:22"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+C:\Users\pasha\OneDrive\Desktop\HABDDD\nawy-task\backend\src\controllers\apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+The table `public.Apartment` does not exist in the current database. {"clientVersion":"5.17.0","code":"P2021","meta":{"modelName":"Apartment","table":"public.Apartment"},"name":"PrismaClientKnownRequestError","stack":"PrismaClientKnownRequestError: \nInvalid `apartmentClient.create()` invocation in\nC:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\src\\controllers\\apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nThe table `public.Apartment` does not exist in the current database.\n    at _n.handleRequestError (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:7749)\n    at _n.handleAndLogRequestError (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:7057)\n    at _n.request (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:121:6741)\n    at async l (C:\\Users\\pasha\\OneDrive\\Desktop\\HABDDD\\nawy-task\\backend\\node_modules\\@prisma\\client\\runtime\\library.js:130:9355)"}
+[31merror[39m: Error when creating apartment 
+Invalid `apartmentClient.create()` invocation in
+/app/src/controllers/apartment.controller.ts:116:45
+
+  113   prefix: "apartment",
+  114 });
+  115 
+→ 116 const apartment = await apartmentClient.create(
+Can't reach database server at `localhost:5433`
+
+Please make sure your database server is running at `localhost:5433`. {"clientVersion":"5.17.0","name":"PrismaClientInitializationError","stack":"PrismaClientInitializationError: \nInvalid `apartmentClient.create()` invocation in\n/app/src/controllers/apartment.controller.ts:116:45\n\n  113   prefix: \"apartment\",\n  114 });\n  115 \n→ 116 const apartment = await apartmentClient.create(\nCan't reach database server at `localhost:5433`\n\nPlease make sure your database server is running at `localhost:5433`.\n    at _n.handleRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:8049)\n    at _n.handleAndLogRequestError (/app/node_modules/@prisma/client/runtime/library.js:121:7057)\n    at _n.request (/app/node_modules/@prisma/client/runtime/library.js:121:6741)\n    at async l (/app/node_modules/@prisma/client/runtime/library.js:130:9355)"}
+[31merror[39m: failed to ensure s3 bucket CORS rules Custom endpoint `s3ninja://9000` was not a valid URI {"name":"EndpointError","stack":"EndpointError: Custom endpoint `s3ninja://9000` was not a valid URI\n    at evaluateErrorRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:401:9)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:431:7)\n    at evaluateTreeRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:416:10)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:433:35)\n    at evaluateTreeRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:416:10)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:433:35)\n    at resolveEndpoint (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:462:20)\n    at Object.defaultEndpointResolver [as endpointProvider] (/app/node_modules/@aws-sdk/client-s3/dist-cjs/endpoint/endpointResolver.js:8:49)\n    at getEndpointFromInstructions (/app/node_modules/@smithy/middleware-endpoint/dist-cjs/index.js:127:33)\n    at async /app/node_modules/@smithy/middleware-endpoint/dist-cjs/index.js:167:22"}
+[31merror[39m: failed to ensure s3 bucket CORS rules Custom endpoint `s3ninja://9000` was not a valid URI {"name":"EndpointError","stack":"EndpointError: Custom endpoint `s3ninja://9000` was not a valid URI\n    at evaluateErrorRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:401:9)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:431:7)\n    at evaluateTreeRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:416:10)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:433:35)\n    at evaluateTreeRule (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:416:10)\n    at evaluateRules (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:433:35)\n    at resolveEndpoint (/app/node_modules/@smithy/util-endpoints/dist-cjs/index.js:462:20)\n    at Object.defaultEndpointResolver [as endpointProvider] (/app/node_modules/@aws-sdk/client-s3/dist-cjs/endpoint/endpointResolver.js:8:49)\n    at getEndpointFromInstructions (/app/node_modules/@smithy/middleware-endpoint/dist-cjs/index.js:127:33)\n    at async /app/node_modules/@smithy/middleware-endpoint/dist-cjs/index.js:167:22"}
